@@ -26,10 +26,10 @@ public class Main {
         System.out.println("Math :");
         int math = input.nextInt();
 
-        System.out.println("The array is {" + spanish + ", " + english + ", " + compsci + ", " + ", " + film + ", " + economics + ", " + math + "}");
+        System.out.println("The array is {" + spanish + ", " + english + ", " + compsci + ", " + film + ", " + economics + ", " + math + "}");
 
         int[] aRay= {spanish, english, compsci, film, economics, math};
-        int total = 0;
+        double total = 0;
 
         for(int i = 0; i < aRay.length; i++){
             total = total +aRay[i];
@@ -37,7 +37,7 @@ public class Main {
 
 //calculating the average of an array
         double average = total / aRay.length;
-        System.out.format("The average is: %.3f", average);
+        System.out.format("The average is: %.2f", average);
         System.out.println(" ");
 
 //sorting the array
