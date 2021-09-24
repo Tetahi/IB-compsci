@@ -1,0 +1,109 @@
+package hello;
+
+import javax.naming.PartialResultException;
+import javax.print.attribute.IntegerSyntax;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input the grades for each of your subjects ");
+        System.out.println("Spanish :");
+        int spanish = input.nextInt();
+        System.out.println("English :");
+        int english = input.nextInt();
+        System.out.println("Computer Science :");
+        int compsci = input.nextInt();
+        System.out.println("Film :");
+        int film = input.nextInt();
+        System.out.println("Economics :");
+        int economics = input.nextInt();
+        System.out.println("Math :");
+        int math = input.nextInt();
+
+        System.out.println("The array is {" + spanish + ", " + english + ", " + compsci + ", " + ", " + film + ", " + economics + ", " + math + "}");
+
+        int[] aRay= {spanish, english, compsci, film, economics, math};
+        int total = 0;
+
+        for(int i = 0; i < aRay.length; i++){
+            total = total +aRay[i];
+        }
+
+//calculating the average of an array
+        double average = total / aRay.length;
+        System.out.format("The average is: %.3f", average);
+        System.out.println(" ");
+
+//sorting the array
+        System.out.println("Your grads sorted is :");
+        Arrays.sort(aRay);
+        for(int i = 0; i < aRay.length; i++){
+            System.out.println(aRay[i]);
+        }
+
+//maximum value
+        int maxxy = Integer.MIN_VALUE;
+        for(int i = 0; i < aRay.length; i++){
+            if (aRay[i] > maxxy){
+                maxxy = aRay[i];
+            }
+        }
+        System.out.println("Your highest grade is " + maxxy + " and in: ");
+        System.out.println("------------------------------------");
+        if (maxxy == english) {
+            System.out.println("English");
+        }
+        if (maxxy == economics) {
+            System.out.println("Economics");
+        }
+        if (maxxy == compsci) {
+            System.out.println("Computer science");
+        }
+        if (maxxy == spanish) {
+            System.out.println("Spanish");
+        }
+        if (maxxy == film) {
+            System.out.println("Film");
+        }
+        if (maxxy == math) {
+            System.out.println("Math");
+        }
+        System.out.println("------------------------------------");
+        System.out.println("");
+//mininmum value
+        int minny = Integer.MAX_VALUE;
+        for(int i = 0; i < aRay.length; i++){
+            if (aRay[i] < minny){
+                minny = aRay[i];
+            }
+        }
+        System.out.println("Your lowest grade is " + minny + " and in: ");
+        System.out.println("------------------------------------");
+        if (minny == english) {
+            System.out.println("English");
+        }
+        if (minny == economics) {
+            System.out.println("Economics");
+        }
+        if (minny == compsci) {
+            System.out.println("Computer science");
+        }
+        if (minny == spanish) {
+            System.out.println("Spanish");
+        }
+        if (minny == film) {
+            System.out.println("Film");
+        }
+        if (minny == math) {
+            System.out.println("Math");
+        }
+        System.out.println("------------------------------------");
+
+    }
+}
