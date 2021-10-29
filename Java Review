@@ -1,0 +1,60 @@
+package hello;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.print("Input a number: ");
+        int number1 = scnr.nextInt();
+
+        System.out.print("Input another number: ");
+        int number2 = scnr.nextInt();
+
+        int sumnum = number1 + number2;
+        int multinum = number1 * number2;
+
+        System.out.print("The sum of the numbers is " + sumnum );
+        System.out.println("");
+        
+        System.out.print("The product of the numbers is " + multinum );
+        System.out.println("");
+
+        
+        System.out.print("Here you can find the multiplication table of a number, input anything: ");
+        int number3 = scnr.nextInt();
+        
+        for(int i = 1; i < 11; i++){
+            int mult = number3 * i;
+            System.out.println(number3 + " * " + i + " = " + mult);
+        }
+
+
+        System.out.println("Now I will calculate the average of your numbers, input three numbers");
+        System.out.println("First number: ");
+        int number4 = scnr.nextInt();
+        System.out.println("Second number: ");
+        int number5 = scnr.nextInt();
+        System.out.println("Third number: ");
+        int number6 = scnr.nextInt();
+
+        int average = (number4 + number5 + number6)/3;
+
+        System.out.println("The average of all of the numbers is " + average);
+        
+        
+        System.out.println("Temperature in Fahrenheit: ");
+        double fara = scnr.nextDouble();
+        double celc = (5 * (fara - 32.0)) / 9;
+        System.out.println("Temperature in celsius: " + celc);
+
+        
+        System.out.println("Length in inches: ");
+        double inchy = scnr.nextDouble();
+        double meetior = inchy * 0.0254;
+        System.out.println("Length in meters: " + meetior);
+        
+    }
+}
