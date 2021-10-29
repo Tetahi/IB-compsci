@@ -1,0 +1,37 @@
+package hello;
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] aRay= {3, 6, 13, 63, 4, 13};
+        Arrays.sort(aRay);
+
+        int total = 0;
+
+        for(int i = 0; i < aRay.length; i++) {
+            total = total + aRay[i];
+        }
+
+        System.out.println("The total of your array is " + total);
+
+        int min = aRay[0];
+        int max = aRay[0];
+        for(int i = 0; i < aRay.length; i++) {
+            if (aRay[i] < min){
+                min = aRay[i];
+            }
+            if (aRay[i] > max){
+                max = aRay[i];
+            }
+        }
+
+        System.out.println("The max is " + max);
+        System.out.println("The min is " + min);
+
+
+
+    }
+}
