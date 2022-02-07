@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Your chance of passing is: " + playerIQ + "%");
 
         System.out.println("Please enter your name:");
-
+        //getting the user input
         playerName = myScanner.nextLine();
 
         System.out.println("Hello " + playerName + ",  lets pass this test!");
@@ -39,6 +39,7 @@ public class Main {
 
     public void nightBefore() {
 
+        //Printing the user options for the game
         System.out.println("\n------------------------------------------------------------------\n");
         System.out.println("It is the day before your math test");
         System.out.println("");
@@ -136,6 +137,7 @@ public class Main {
         System.out.println("Cramming instead of eating means you will be hungry during the exam");
         System.out.println("However it does increase your chances of passing to " + playerIQ + "%");
 
+        //calling the drink function so that that area is code is run after this.
         drink();
     }
 
@@ -151,6 +153,7 @@ public class Main {
         System.out.println("You have a full breakfast and are full of nutrition for the test");
         System.out.println("This brings your passing chances to " + playerIQ + "%");
 
+        //calling the drink function so that that area is code is run after this.
         drink();
     }
 
@@ -167,6 +170,7 @@ public class Main {
         System.out.println("plus you can't study that much.");
         System.out.println("That brings your passing chances to " + playerIQ + "%");
 
+        //calling the drink function so that that area is code is run after this.
         drink();
     }
 
@@ -325,6 +329,7 @@ public class Main {
         int Min1 = 0;
         int Max1 = 100;
 
+        //This gives a random number between 0 and 100, the higher the chance of passing by cheating, the more likely they are to win at this game
         int madness = Min1 + (int) (Math.random() * ((Max1 - Min1) + 1));
         if (playerCheat > madness){
             System.out.println("\n------------------------------------------------------------------\n");
@@ -345,6 +350,7 @@ public class Main {
         int Min1 = 0;
         int Max1 = 100;
 
+        //This gives a random number between 0 and 100, the higher the chance of passing the more likely they are to win at this game
         int madness = Min1 + (int) (Math.random() * ((Max1 - Min1) + 1));
         if (playerIQ < madness){
             System.out.println("\n------------------------------------------------------------------\n");
